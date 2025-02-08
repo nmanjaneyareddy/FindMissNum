@@ -1,77 +1,66 @@
-#Missing Numbers Detector
+# Missing Numbers Report - Google Colab Instructions
 
-#Overview
+This program processes an Excel file to identify missing and duplicate numbers with prefixes (if any) from a specified column. Follow the steps below to run this script on **Google Colab**.
 
-This script processes an uploaded Excel file (.xlsx), extracts numeric values from the first column of the first sheet, and identifies any missing numbers in the range. It is useful for checking gaps in sequential numbering, such as book accession numbers, serial records, or inventory lists.
+## 🚀 How to Run the Program
 
+### 1️⃣ **Copy-Paste Method:**
 
-#Features
+1. Open [Google Colab](https://colab.research.google.com/).
+2. Click on **`New Notebook`**.
+3. Copy the entire Python code from the provided script.
+4. Paste the code into the first code cell in the notebook.
+5. Click **`Run`** (press `Shift + Enter` or click the Play button).
+6. Proceed with the **file upload** as instructed below.
 
-Accepts an Excel file (.xlsx) via an interactive file upload widget.
+### 2️⃣ **Upload Script Method:**
 
-Extracts numeric values from the first column of the first sheet, even if mixed with text.
+1. Open [Google Colab](https://colab.research.google.com/).
+2. Click on **`File` > `Upload Notebook`** if you have saved the script as a `.ipynb` file.
+3. Select the notebook file containing the script.
+4. Click **`Run All`** to execute all code cells.
+5. Proceed with the **file upload** as instructed below.
 
-Identifies missing numbers within the detected range.
+---
 
-Provides informative messages and error handling.
+## 📥 Uploading an Excel File
 
+1. After running the script, you'll see a prompt:
+   
+   `📂 Please upload an Excel file (.xlsx) to check for missing numbers in 'Sheet1'.`
 
-#Requirements
+2. Click the **`Browse`** button to upload your `.xlsx` file.
+3. Make sure the file has data in **Sheet1** and the relevant numbers are in the **first column (Column A)**.
 
-Ensure you have the following Python libraries installed:
+---
 
-pandas
+## 📊 Output Report
 
-ipywidgets
+- The script processes the uploaded file and:
+  - Detects **missing numbers** and **duplicates**.
+  - Maintains prefixes where present (e.g., `BK101`, `ID202`).
+  - Displays a detailed report in the output console.
 
-IPython
+- It generates an Excel report named:
 
-You can install missing dependencies using:
+   **`missing_numbers_report.xlsx`**
 
-pip install pandas ipywidgets
+- The file will be automatically downloaded after processing.
 
+---
 
-#How It Works
+## ⚠️ Troubleshooting
 
-The script prompts the user to upload an Excel file (.xlsx).
+- **Error: `Error processing file`**
+  - Ensure the uploaded file is in `.xlsx` format.
+  - Check that **Sheet1** exists and contains numeric data in Column A.
 
-It reads the first sheet and extracts numeric values from the first column.
+- **Missing Data in Output**
+  - Verify that prefixes are consistent.
+  - Make sure there are no empty rows in the dataset.
 
-The script sorts the numbers and identifies missing values within the detected range.
+---
 
-Results are displayed, including:
+## 📩 Contact
 
-The range of numbers found.
-
-The count of missing numbers.
-
-A list of missing numbers.
-
-
-#Usage
-
-Run the script in a Jupyter Notebook/Google colab.
-
-Upload an Excel file (.xlsx) when prompted.
-
-View the output to check for missing numbers.
-
-Error Handling
-
-The script handles:
-
-Empty or non-existent sheets.
-
-Non-numeric values.
-
-Unexpected file errors.
-
-Invalid or corrupted files.
-
-Update History
-
-03/02/2025 - Latest update with improved error handling and user messages.
-
-#Author
-
-Developed by Anjaneya Reddy
+For issues or questions regarding this script, feel free to reach out to the author or raise an issue in your project repository.
